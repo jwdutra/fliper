@@ -4,8 +4,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'app/app_module.dart';
 import 'app/app_widget.dart';
 
-const enviroment = String.fromEnvironment("ENV", defaultValue: '');
+import 'package:intl/intl.dart';
 
 void main() async {
+  Intl.defaultLocale = 'pt_BR';
   runApp(ModularApp(module: AppModule(), child: AppWidget()));
 }

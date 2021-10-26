@@ -20,7 +20,6 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   void initState() {
     store.beforeInit();
     super.initState();
-    Intl.defaultLocale = 'pt_BR';
     //Future.delayed(Duration.zero, () => store.init());
   }
 
@@ -30,7 +29,17 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
       backgroundColor: Color(0xFFe8ebf6),
       body: Observer(
         builder: (context) => Column(
-          children: [!store.carregando ? _resumo() : Container()],
+          children: [
+            !store.carregando
+                ? _resumo()
+                : Container(
+                    height: 500,
+                    alignment: Alignment.center,
+                    child: Observer(builder: (_) {
+                      return Center(child: CircularProgressIndicator());
+                    }),
+                  )
+          ],
         ),
       ),
     );
