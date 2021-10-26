@@ -1,8 +1,8 @@
 import 'package:fliper/app/modules/home/repositories/home_reporitory.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../pages/home_store.dart';
+import './pages/home_store.dart';
 
-import '../pages/home_page.dart';
+import './pages/home_page.dart';
 
 class HomeModule extends Module {
   @override

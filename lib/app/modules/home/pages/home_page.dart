@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'package:fliper/app/modules/pages/home_store.dart';
+import 'package:fliper/app/modules/home/pages/home_store.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
